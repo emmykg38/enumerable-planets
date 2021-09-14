@@ -9,11 +9,14 @@
 </head>
 <body>
 <h1>Planets of our Solar System:</h1>
-<table>
+<table class="table-bordered">
+    <th>In order<br>
+        from Sun</th>
     <th>Planet</th>
     <th>Days in a Year</th>
 
     <tr th:each="planet : ${planets}">
+        <td th:text="${planet.number}"></td>
         <td th:text="${planet.name}"></td>
         <td th:text="${planet.yearLength}"></td>
     </tr>
